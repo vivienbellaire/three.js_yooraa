@@ -71,7 +71,7 @@ export default class Game
         this.renderer.update()
         this.debug.update()
         
-        this.scene.update()
+        
 
         console.log("Number of Triangles :", this.renderer.instance.info.render.triangles);
     }
