@@ -7,8 +7,9 @@ export default class Debug
 {
     constructor()
     {
-        this.active = window.location.hash === '#debug'
 
+        this.active = window.location.hash === '#debug'
+       
         if(this.active)
         {
             this.ui = new dat.GUI()
@@ -32,5 +33,6 @@ export default class Debug
         this.stats.end() 
         // ...
         this.stats.begin()
+        
     }
 }

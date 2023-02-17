@@ -12,19 +12,29 @@ export default [
             'textures/environmentMap/back.png'
         ]
     },
+    // {
+    //     name: 'grassColorTexture',
+    //     type: 'texture',
+    //     path: 'textures/dirt/color.jpg'
+    // },
+    // {
+    //     name: 'grassNormalTexture',
+    //     type: 'texture',
+    //     path: 'textures/dirt/normal.jpg'
+    // },
     {
-        name: 'grassColorTexture',
-        type: 'texture',
-        path: 'textures/dirt/color.jpg'
-    },
-    {
-        name: 'grassNormalTexture',
-        type: 'texture',
-        path: 'textures/dirt/normal.jpg'
-    },
-    {
-        name: 'foxModel',
+        name: 'landscapeModel',
         type: 'gltfModel',
-        path: 'models/Fox/glTF/Fox.gltf'
-    }
+        path: 'models/Landscape/landscape-6.glb'
+    },
+    {
+        name: 'playerModel',
+        type: 'gltfModel',
+        path: 'models/Players/Player2.glb'
+    },
+    // {
+    //     name: 'PlayerModel',
+    //     type: 'audio',
+    //     path: 'models/Players/Player2.glb'
+    // }
 ]

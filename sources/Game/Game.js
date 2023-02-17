@@ -73,7 +73,7 @@ export default class Game
         
         
 
-        console.log("Number of Triangles :", this.renderer.instance.info.render.triangles);
+       
     }
 
     destroy()

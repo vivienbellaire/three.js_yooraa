@@ -1,6 +1,8 @@
 import * as THREE from 'three'
 import Game from './Game'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+
 
 export default class Camera
 {
@@ -12,20 +14,33 @@ export default class Camera
         this.canvas = this.game.canvas
 
         this.setInstance()
-        this.setControls()
+        // this.setControls()
     }
 
     setInstance()
     {
-        this.instance = new THREE.PerspectiveCamera(45, this.sizes.width / this.sizes.height, 1, 200000)
-        this.instance.position.set(0, 10, 0)
+        this.instance = new THREE.PerspectiveCamera(75, this.sizes.width / this.sizes.height, 0.1, 60000)
+        this.instance.position.set(0, 3, -3)
         this.scene.add(this.instance)
     }
 
     setControls()
     {
-        this.controls = new OrbitControls(this.instance, this.canvas)
-        this.controls.enableDamping = true
+        // this.controls = new OrbitControls(this.instance, this.canvas)
+        // this.controls.enablePan = false
+
+        // this.controls.enableZoom = true
+        // this.controls.minDistance = 1
+        // this.controls.maxDistance = 10
+        // this.controls.zoomSpeed = 2
+        
+        // this.controls.enableRotate = true
+        // this.controls.target()
+
+        // this.controls = new PointerLockControls( this.instance, this.canvas );
+        // this.scene.add( this.controls.getObject() );  
+        // this.controls.isLocked === true
+        // this.controls.lock()
     }
 
     resize()
@@ -36,6 +51,6 @@ export default class Camera
 
     update()
     {
-        this.controls.update()
+        // this.controls.update()
     }
 }

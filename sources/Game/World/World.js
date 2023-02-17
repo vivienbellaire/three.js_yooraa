@@ -1,8 +1,9 @@
 import Game from '../Game.js'
 
-import Ground from './Environnement/World/Ground.js'
+import Landscape from './Environnement/World/Landscape.js'
 import Light from './Environnement/World/Light.js'
-import Sky from './Environnement/World/Sky.js'
+import Environment from './Environnement/World/Environment.js'
+import Player from './Environnement/World/Player.js'
 
 
 export default class World
@@ -17,17 +18,16 @@ export default class World
         this.resources.on('ready', () =>
         {
             // Setup
-            this.ground = new Ground()
+            this.landscape = new Landscape()
             this.light = new Light()
-            this.sky = new Sky()
-            // this.fox = new Fox()
-            // this.environment = new Environment()
+            this.environment = new Environment()
+            this.player = new Player()
         })
     }
 
     update()
     {
-        // if(this.fox)
-        //     this.fox.update()
+        if(this.player)
+            this.player.update()
     }
 }
